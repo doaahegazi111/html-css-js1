@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+*{
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+:root{
+    --orange-color:#ffa500;
+    --white-color:#fff;
+    --gray:#333;
+    --gray-back:#222;
+    --main-margin:50px;
+    --h-color:#666;
+}
+::selection{
+    color: var(--white-color);
+    background-color: var(--orange-color);
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+nav{
+    z-index: 100;
+    border-bottom: 1px solid var(--gray-back);
+    position: fixed;
+    width: 100%;
+}
+nav .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--gray);
+    height: 70px;
+}
+nav .container .logo{
+    font-size: 30px;
+    color: var(--white-color);
+}
+nav .container .logo span{
+    color: var(--orange-color);
+}
+nav .container .links a{
+    color: var(--white-color);
+    font-size: 18px;
+    padding-right: 25px;
+}
+nav .container .icon i{
+    color:var(--white-color);
+    padding-right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+nav .container .icon i:active,
+nav .container .icon i:hover{
+    color: var(--orange-color);
+}
+nav .container .links a:active,
+nav .container .links a:hover{
+    color: var(--orange-color);
+}
+#bars{
+    display: none;
+    color:var(--white-color);
+    font-size: 20px;
+    cursor: pointer;
+}
+nav .container #bars i:hover{
+    color: var(--orange-color);
+}
+nav .container .links.active{
+    display: block;
+}
+nav .search-input{
+    position: absolute;
+    top: 71px;
+    background-color: var(--gray);
+    color: var(--white-color);
+    padding: 20px 70px 20px 20px;
+    left: 0;
+    right: 0;
+    transition: 0.1s;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+}
+nav .search-input.active{
+    opacity: 1;
+}
+nav .search-input input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+}
+nav .search-input label{
+    position: absolute;
+    right: 25px;
+    font-size: 25px;
+    cursor: pointer;
+    padding-left: 10px;
+}
+nav .container .login{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top:-1500px;
+    height: 100vh;
+    background-color:rgba(0,0,0,.7);
+    transition: 0.3s;
+}
+nav .container .login.active{
+    top: 0;
+}
+nav .container .login .contain{
+    background-color: var(--white-color);
+    padding: 30px 30px 10px 30px;
+    width: 500px;
+    height: 320px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    margin: 210px auto 0;
+    box-shadow: 0 0 10px 0 rgb(125, 123, 123);
+}
+nav .container .login .contain i{
+    font-size: 40px;
+    color: var(--white-color);
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    cursor: pointer;
+}
+nav .container .login h2{
+    color: rgba(51, 51, 51, 0.882);
+    font-size: 30px;
+    letter-spacing: 1px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+nav .container .login .input input{
+    width: 100%;
+    border-radius: 6px;
+    padding: 8px;
+    border: 1px solid var(--gray-back);
+    margin-bottom: 10px;
+}
+nav .container .login .login-Now{
+    background-color: var(--orange-color);
+    color: var(--white-color);
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+nav .container .login .contain .checkbox{
+    margin-bottom: 4px;
+}
+nav .container .login .contain p{
+    color: rgb(38, 37, 37);
+}
+nav .container .login .contain p:not(:last-child){
+    margin-bottom: 4px;
+}
+nav .container .login .contain p a{
+    color:#ffa600;
+}
+nav .container .login .contain p a:hover{
+    text-decoration: underline;
+}
+.sectionOne{
+    position: relative;
+    height: 100vh;
+}
+#book .title h1{
+    margin: 0;
+}
+.sectionOne .video video{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+.sectionOne .title{
+    text-align: center;
+    padding-top: 300px;
+}
+.sectionOne .title h1{
+    margin: 0;
+    font-size: 40px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    color:var(--white-color);
+}
+.sectionOne .title p{
+    color:rgb(222, 222, 222);
+    margin-bottom: 20px;
+}
+.sectionOne .title a{
+    cursor: pointer;
+    background-color: var(--orange-color);
+    color: var(--white-color);
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+.sectionOne .title a:hover ,.sectionTwo .BookNow .book a:hover , .card a:hover , .sectionFive .gals a:hover , .sectionSeven .contact .form a:hover{
+    background-color: transparent;
+    color: var(--orange-color);
+    border: 1px solid var(--orange-color);
+}
+.sectionOne .controls{
+    background-color:rgba(0,0,0,.7) ;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:80px ;
+    text-align: center;
+    padding: 12px 5px 10px;
+    width: 180px;
+    border-radius: 50px;
+}
+.sectionOne .controls span{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    cursor: pointer;
+}
+.sectionOne .controls .move{
+    background-color: var(--orange-color);
+}
+.mainTitle{
+    margin-top: var(--main-margin);
+    text-align: center;
+}
+.mainTitle span{
+    background-color: rgb(255, 165, 0,.2);
+    color: var(--orange-color);
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.sectionTwo .mainTitle .space{
+    background-color: transparent;
+}
+.sectionTwo .BookNow{
+    margin-top: var(--main-margin);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+} 
+.sectionTwo .BookNow .img {
+    width: 50%;
+}
+.sectionTwo .BookNow .img img{
+    width: 100%;
+} 
+.sectionTwo .BookNow .book{
+    box-shadow: 0 0 10px 0 #ddd;
+    padding: 30px;
+    border-radius: 10px;
+    width:45%;
+}
+.sectionTwo .BookNow .book input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid slategray;
+}
+.sectionTwo .BookNow .book h4{
+    margin-bottom: 5px;
+    font-weight: 400;
+    color:var(--h-color) ;
+}
+.sectionTwo .BookNow .book a , .card a , .sectionFive .gals a{
+    background-color: var(--orange-color);
+    color: var(--white-color);
+    padding: 10px 15px;
+    margin-top: 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.sectionThree .card img{
+    object-fit: cover;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.sectionThree .card {
+    max-width: 380px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ddd;
+}
+.sectionThree .cards{
+    margin-top: var(--main-margin);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.sectionThree .cards .box{
+    padding:5px 15px 20px;
+}
+.sectionThree .card h3 , .sectionFour .services .ser h3{
+    color: rgba(0, 0, 0, 0.866);
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.sectionThree .card h3 i , .sectionThree .card .starts i ,.sectionSix .review .starts i{
+    color: var(--orange-color);
+}
+.sectionThree .card p{
+    color:#777;
+    margin-bottom: 5px;
+}
+.sectionThree .card .price{
+    margin-top: 5px;
+}
+.sectionThree .card .price span{
+    text-decoration: line-through;
+    color: var(--h-color);
+    font-size: 13px;
+}
+.sectionFour .services , .sectionFive .gals {
+    text-align: center;
+    margin-top: var(--main-margin);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: var(--main-margin);
+}
+.sectionFour .services .ser{
+    max-width: 360px;
+    padding: 30px;
+}
+.sectionFour .services .ser:hover{
+    box-shadow: 0 0 10px #ddd;
+}
+.sectionFour .services .ser i{
+    color: var(--orange-color);
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+.sectionFour .services .ser p{
+    color: var(--h-color);
+}
+.sectionFive{
+    background-color: rgba(221, 221, 221, 0.412);
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+.sectionFive .gals .gallery{
+    max-width: 360px;
+    padding: 10px;
+    background-color: var(--white-color);
+    position: relative;
+    overflow: hidden;
+}
+.sectionFive .gals .gallery img{
+    width: 100%;
+    object-fit: cover;
+}
+.sectionFive .gals .info{
+    background-color: rgba(0, 0, 0, 0.518);
+    position: absolute;
+    width: calc(100% - 20px);
+    top: -190px;
+    transition: 0.2s;
+}
+.sectionFive .gals .info h3{
+    color: var(--orange-color);
+    padding-top: 70px;
+    padding-bottom: 5px;
+}
+.sectionFive .gals .info p{
+    color: var(--white-color);
+}
+.sectionFive .gals .gallery:hover .info{
+    top: 10px;
+    bottom: 13px;
+}
+.review .review-slider{
+    padding: 50px;
+    overflow: hidden;
+}
+.review .box{
+    padding:2rem;
+    text-align: center;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.review .box img{
+    height:120px;
+    width:120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+.review .box h3{
+    color:#333;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+.review .box p{
+    color:#666;
+    margin-bottom: 5px;
+}
+.review .box .stars i{
+    color:var(--orange-color);
+}
+.sectionSeven{
+    margin-top: var(--main-margin);
+}
+.sectionSeven .contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: var(--main-margin);
+}
+.sectionSeven .contact .img {
+    width:40% ;
+}
+.sectionSeven .contact .img img{
+    width: 100%;
+}
+.sectionSeven .contact .form{
+    width: 50%;
+    box-shadow: 0 0 10px #ddd;
+    padding: 50px 10px 50px 40px;
+}
+.sectionSeven .contact .form div:nth-child(1) , .sectionSeven .contact .form div:nth-child(2){
+    margin-bottom: 5px;
+}
+.sectionSeven .contact .form div:nth-child(1) input , .sectionSeven .contact .form div:nth-child(2) input{
+    width: 48%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(221, 221, 221, 0.348);
+}
+.sectionSeven .contact .form textarea{
+    width: 96%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(221, 221, 221, 0.348);
+    margin-bottom: 20px;
+}
+.sectionSeven .contact .form a{
+    padding: 10px 20px;
+    background-color: var(--orange-color);
+    color: var(--white-color);
+    border-radius: 5px;
+}
+.photos{
+    padding: 50px;
+}
+.photos .brand{
+    overflow: hidden;
+}
+footer{
+    background-color: var(--gray);
+    padding:50px 80px 0;
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: var(--white-color);
+    padding-bottom: 10px;
+}
+footer .container div{
+    width: 150px;
+}
+footer .container h3{
+    margin-bottom: 9px;
+    font-size: 20px;
+}
+footer .container p{
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+footer .container a{
+    display: block;
+    margin-bottom: 6px;
+    color: var(--white-color);
+}
+footer .container a:hover{
+    text-decoration: underline;
+}
+footer .container i{
+    color: var(--orange-color);
+    padding-right: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+footer .container i:hover{
+    transform: rotate(360deg);
+}
+footer .created{
+    text-align: center;
+    color: var(--white-color);
+    padding: 15px 5px;
+    border-top: 1px solid var(--orange-color);
+}
+footer .created span{
+    color: var(--orange-color);
+}
+@media (max-width:768px) {
+    .container{
+        max-width: 750px;
+    }
+    nav .container .icon i{
+        padding-right: 5px;
+    }
+    nav .container .login .contain{
+        width: fit-content;
+    }
+    .sectionOne .title h1{
+        font-size: 30px;
+        letter-spacing: 1;
+    }
+    .sectionOne .title{
+        padding-top: 250px;
+    }
+    .review .review-slider{
+        padding: 10px;
+    }
+}
+@media (max-width:992px) {
+    .container{
+        max-width: 970px;
+    }
+    #bars{
+        display: block;
+    }
+    nav .container .links{
+        left: 0;
+        top:71px;
+        position: absolute;
+        background-color: var(--gray);
+        width: 100%;
+        padding: 22px 15px 10px;
+        display: none;
+    }
+    nav .container .links a{
+        display: block;
+        padding-bottom: 15px;
+        background-color: var(--gray-back);
+        padding: 15px ;
+        margin-bottom: 10px;
+        border-radius: 6px;
+    }
+    footer{
+        padding: 40px 10px 0;
+    }
+}
+@media (max-width:1200px) {
+    .container{
+        max-width: 11700px;
+    }
+}
+@media (max-width:411px){
+    nav .container .login .contain{
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 30px 13px 0;
+    }
+    nav .container .login .contain p{
+        font-size: 15px;
+    }
+    .mainTitle span{
+        font-size: 20px;
+        padding: 5px;
+    }
+    .review .box h3{
+        font-size: 15px;
+    }
+    .review .box p{
+        font-size: 10px;
+    }
+    .review .box img{
+        width: 60px;
+        height: 60px;
+    }
+    .review .box .stars i{
+        font-size: 10px;
+    }
+    .sectionFive .gals .info h3{
+        font-size: 13px;
+        padding-top: 37px;
+    }
+    .sectionFive .gals .info p{
+        font-size: 15px;
+        padding-left: 3px;
+        padding-left: 3px;
+    }
+    .sectionFive .gals a{
+        padding: 5px 8px;
+    }
+    footer .created{
+        font-size: 13px;
+    }
+}
+@media (max-width:800px) {
+    .sectionTwo .BookNow .img , .sectionTwo .BookNow .book , .sectionSeven .contact .form , .sectionSeven .contact .img{
+        width: 100%;
+    }
+    .sectionTwo .BookNow .book {
+        padding: 30px 15px;
+    }
+    .sectionSeven .contact .form {
+        padding: 30px 10px;
+    }
+}
